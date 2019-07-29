@@ -43,6 +43,25 @@ public class MyLinearLayout extends LinearLayout {
     }
 
     @Override
+    public boolean onInterceptTouchEvent(MotionEvent ev) {
+        int action = ev.getAction();
+        switch (action) {
+            case MotionEvent.ACTION_DOWN:
+                Log.e(TAG, "onInterceptTouchEvent ACTION_DOWN");
+                break;
+            case MotionEvent.ACTION_MOVE:
+                Log.e(TAG, "onInterceptTouchEvent ACTION_MOVE");
+                break;
+            case MotionEvent.ACTION_UP:
+                Log.e(TAG, "onInterceptTouchEvent ACTION_UP");
+                break;
+            default:
+                break;
+        }
+        return super.onInterceptTouchEvent(ev);
+    }
+
+    @Override
     public boolean onTouchEvent(MotionEvent event) {
         int action = event.getAction();
 

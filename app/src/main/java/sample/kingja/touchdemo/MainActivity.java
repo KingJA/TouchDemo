@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "【子View】";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
