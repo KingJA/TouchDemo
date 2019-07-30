@@ -24,7 +24,7 @@ public class MyButton extends AppCompatButton {
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
         int action = event.getAction();
-
+//        getParent().requestDisallowInterceptTouchEvent(true);
         switch (action) {
             case MotionEvent.ACTION_DOWN:
                 Log.e(TAG, "dispatchTouchEvent ACTION_DOWN");
