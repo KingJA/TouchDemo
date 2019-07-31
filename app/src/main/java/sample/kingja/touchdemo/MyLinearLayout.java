@@ -16,7 +16,7 @@ import android.widget.LinearLayout;
 public class MyLinearLayout extends LinearLayout {
 
 
-    private static final String TAG = "【父ViewGroup】";
+    private static final String TAG = "父MyLinearLayout==========>";
 
     public MyLinearLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -63,7 +63,6 @@ public class MyLinearLayout extends LinearLayout {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         int action = event.getAction();
-
         switch (action) {
             case MotionEvent.ACTION_DOWN:
                 Log.e(TAG, "onTouchEvent ACTION_DOWN");
