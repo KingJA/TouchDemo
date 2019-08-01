@@ -12,12 +12,12 @@ import android.widget.LinearLayout;
  * Author:KingJA
  * Email:kingjavip@gmail.com
  */
-public class MyFrameLayout extends LinearLayout {
+public class ViewGroupB extends LinearLayout {
 
 
-    private static final String TAG = "爷MyFrameLayout==========>";
+    private static final String TAG = "Level【2】\t【ViewGroupB】\t\t";
 
-    public MyFrameLayout(Context context, AttributeSet attrs) {
+    public ViewGroupB(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
@@ -26,13 +26,13 @@ public class MyFrameLayout extends LinearLayout {
         int action = event.getAction();
         switch (action) {
             case MotionEvent.ACTION_DOWN:
-                Log.e(TAG, "dispatchTouchEvent ACTION_DOWN");
+                Log.e(TAG, "【dispatchTouchEvent】\t\t 【ACTION_DOWN】");
                 break;
             case MotionEvent.ACTION_MOVE:
-                Log.e(TAG, "dispatchTouchEvent ACTION_MOVE");
+                Log.e(TAG, "【dispatchTouchEvent】\t\t 【ACTION_MOVE】");
                 break;
             case MotionEvent.ACTION_UP:
-                Log.e(TAG, "dispatchTouchEvent ACTION_UP");
+                Log.e(TAG, "【dispatchTouchEvent】\t\t 【ACTION_UP】");
                 break;
             default:
                 break;
@@ -45,13 +45,13 @@ public class MyFrameLayout extends LinearLayout {
         int action = ev.getAction();
         switch (action) {
             case MotionEvent.ACTION_DOWN:
-                Log.e(TAG, "onInterceptTouchEvent ACTION_DOWN");
+                Log.e(TAG, "【onInterceptTouchEvent】\t\t 【ACTION_DOWN】");
                 break;
             case MotionEvent.ACTION_MOVE:
-                Log.e(TAG, "onInterceptTouchEvent ACTION_MOVE");
+                Log.e(TAG, "【onInterceptTouchEvent】\t\t 【ACTION_MOVE】");
                 break;
             case MotionEvent.ACTION_UP:
-                Log.e(TAG, "onInterceptTouchEvent ACTION_UP");
+                Log.e(TAG, "【onInterceptTouchEvent】\t\t 【ACTION_UP】");
                 break;
             default:
                 break;
@@ -64,13 +64,13 @@ public class MyFrameLayout extends LinearLayout {
         int action = event.getAction();
         switch (action) {
             case MotionEvent.ACTION_DOWN:
-                Log.e(TAG, "onTouchEvent ACTION_DOWN");
+                Log.e(TAG, "【onTouchEvent】\t\t\t\t 【ACTION_DOWN】");
                 break;
             case MotionEvent.ACTION_MOVE:
-                Log.e(TAG, "onTouchEvent ACTION_MOVE");
+                Log.e(TAG, "【onTouchEvent】\t\t\t\t 【ACTION_MOVE】");
                 break;
             case MotionEvent.ACTION_UP:
-                Log.e(TAG, "onTouchEvent ACTION_UP");
+                Log.e(TAG, "【onTouchEvent】\t\t\t\t 【ACTION_UP】");
                 break;
             default:
                 break;

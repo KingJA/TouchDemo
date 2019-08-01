@@ -1,7 +1,6 @@
 package sample.kingja.touchdemo;
 
 import android.content.Context;
-import android.support.v7.widget.AppCompatButton;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -13,12 +12,12 @@ import android.widget.LinearLayout;
  * Author:KingJA
  * Email:kingjavip@gmail.com
  */
-public class MyLinearLayout extends LinearLayout {
+public class ViewGroupA extends LinearLayout {
 
 
-    private static final String TAG = "父MyLinearLayout==========>";
+    private static final String TAG = "Level【1】\t【ViewGroupA】\t\t";
 
-    public MyLinearLayout(Context context, AttributeSet attrs) {
+    public ViewGroupA(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
@@ -27,13 +26,13 @@ public class MyLinearLayout extends LinearLayout {
         int action = event.getAction();
         switch (action) {
             case MotionEvent.ACTION_DOWN:
-                Log.e(TAG, "dispatchTouchEvent ACTION_DOWN");
+                Log.e(TAG, "【dispatchTouchEvent】\t\t 【ACTION_DOWN】");
                 break;
             case MotionEvent.ACTION_MOVE:
-                Log.e(TAG, "dispatchTouchEvent ACTION_MOVE");
+                Log.e(TAG, "【dispatchTouchEvent】\t\t 【ACTION_MOVE】");
                 break;
             case MotionEvent.ACTION_UP:
-                Log.e(TAG, "dispatchTouchEvent ACTION_UP");
+                Log.e(TAG, "【dispatchTouchEvent】\t\t 【ACTION_UP】");
                 break;
             default:
                 break;
@@ -46,13 +45,13 @@ public class MyLinearLayout extends LinearLayout {
         int action = ev.getAction();
         switch (action) {
             case MotionEvent.ACTION_DOWN:
-                Log.e(TAG, "onInterceptTouchEvent ACTION_DOWN");
+                Log.e(TAG, "【onInterceptTouchEvent】\t\t 【ACTION_DOWN】");
                 break;
             case MotionEvent.ACTION_MOVE:
-                Log.e(TAG, "onInterceptTouchEvent ACTION_MOVE");
+                Log.e(TAG, "【onInterceptTouchEvent】\t\t 【ACTION_MOVE】");
                 break;
             case MotionEvent.ACTION_UP:
-                Log.e(TAG, "onInterceptTouchEvent ACTION_UP");
+                Log.e(TAG, "【onInterceptTouchEvent】\t\t 【ACTION_UP】");
                 break;
             default:
                 break;
@@ -65,13 +64,13 @@ public class MyLinearLayout extends LinearLayout {
         int action = event.getAction();
         switch (action) {
             case MotionEvent.ACTION_DOWN:
-                Log.e(TAG, "onTouchEvent ACTION_DOWN");
+                Log.e(TAG, "【onTouchEvent】\t\t\t\t 【ACTION_DOWN】");
                 break;
             case MotionEvent.ACTION_MOVE:
-                Log.e(TAG, "onTouchEvent ACTION_MOVE");
+                Log.e(TAG, "【onTouchEvent】\t\t\t\t 【ACTION_MOVE】");
                 break;
             case MotionEvent.ACTION_UP:
-                Log.e(TAG, "onTouchEvent ACTION_UP");
+                Log.e(TAG, "【onTouchEvent】\t\t\t\t 【ACTION_UP】");
                 break;
             default:
                 break;
