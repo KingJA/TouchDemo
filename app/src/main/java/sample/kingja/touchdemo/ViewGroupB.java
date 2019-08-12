@@ -56,7 +56,7 @@ public class ViewGroupB extends LinearLayout {
             default:
                 break;
         }
-        return true;
+        return super.onInterceptTouchEvent(ev);
     }
 
     @Override

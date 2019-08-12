@@ -36,12 +36,12 @@ public class MainActivity extends AppCompatActivity {
 //                return false;
 //            }
 //        });
-//        mButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Log.e(TAG, "onClick");
-//            }
-//        });
+        mButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.e(TAG, "onClick");
+            }
+        });
 //        mButton.setOnLongClickListener(new View.OnLongClickListener() {
 //
 //            @Override

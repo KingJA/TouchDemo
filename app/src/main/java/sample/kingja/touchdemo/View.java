@@ -23,8 +23,8 @@ public class View extends AppCompatTextView {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
-        int action = event.getAction();
 //        getParent().requestDisallowInterceptTouchEvent(true);
+        int action = event.getAction();
         switch (action) {
             case MotionEvent.ACTION_DOWN:
                 Log.e(TAG, "【dispatchTouchEvent】\t\t 【ACTION_DOWN】");

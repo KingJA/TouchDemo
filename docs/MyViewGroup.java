@@ -2600,14 +2600,19 @@ public abstract class MyViewGroup extends View implements ViewParent, ViewManage
 
             // Handle an initial down.
             if (actionMasked == MotionEvent.ACTION_DOWN) {
+                // 当开始一个新的触摸手势时，丢弃所有以前的状态
                 // Throw away all previous state when starting a new touch gesture.
                 // The framework may have dropped the up or cancel event for the previous gesture
                 // due to an app switch, ANR, or some other state change.
+                // 清除所有接触目标
+                // （1）mFirstTouchTarget 置为 null
+                // （2）mGroupFlags &= ~FLAG_DISALLOW_INTERCEPT;
                 cancelAndClearTouchTargets(ev);
                 resetTouchState();
             }
 
             // Check for interception.
+            // 关键一：检查拦截
             final boolean intercepted;
             if (actionMasked == MotionEvent.ACTION_DOWN
                     || mFirstTouchTarget != null) {
@@ -2623,6 +2628,8 @@ public abstract class MyViewGroup extends View implements ViewParent, ViewManage
             } else {
                 // There are no touch targets and this action is not an initial down
                 // so this view group continues to intercept touches.
+                // 没有触摸目标，且当前事件不是 DOWN 事件（表明没有子视图处理事件，当前视图处理事件）
+                // 此时这个视图组继续拦截触摸
                 intercepted = true;
             }
 
@@ -2640,6 +2647,7 @@ public abstract class MyViewGroup extends View implements ViewParent, ViewManage
             final boolean split = (mGroupFlags & FLAG_SPLIT_MOTION_EVENTS) != 0;
             TouchTarget newTouchTarget = null;
             boolean alreadyDispatchedToNewTouchTarget = false;
+            // 当前事件不是 CANCEL 事件，且不拦截
             if (!canceled && !intercepted) {
                 //没取消&&没拦截
 
